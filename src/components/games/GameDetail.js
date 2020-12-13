@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
+import Heading from "../layout/Heading";
 import { BASE_URL } from "../../constants/api";
 
 function GameDetail() {
@@ -28,17 +29,18 @@ function GameDetail() {
 	}
 
 	return (
-		
-		<Row>
-			<Col md={6} className="detail-image">
-			  <Image src={detail.background_image}/>
-			</Col>
-			<Col>
-        <h1>{detail.name}</h1>
-        <p>{detail.description}</p>
-			</Col>
-		</Row>
-		
+    <>
+      <Heading content={detail.name}></Heading>
+      
+      <Row>
+        <Col>
+          <Image className="img-fluid" src={detail.background_image}/>  
+        </Col>
+        <Col>
+          <p>{detail.description}</p>
+        </Col>
+      </Row>
+    </>	
 	);
 }
 

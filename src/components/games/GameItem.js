@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 
 function GameItem({ id, name, background_image, released, rating }) {
   return (
-    <Card>
+    <Card >
       <Card.Img variant="top" src={background_image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>

@@ -6,7 +6,6 @@ import { BASE_URL } from "../../constants/api";
 import GameItem from "./GameItem";
 import SearchGame from "./SearchGame";
 
-
 export function GameList() {
   const [games, displayGames] = useState([]);
   const [filteredGames, setFilteredGames] = useState([]);
@@ -56,7 +55,7 @@ export function GameList() {
           return (
             <Col xs={6} md={4} lg={3} key={id}>
               <GameItem id={id}  name={name} background_image={background_image} released={released} rating={rating}/>
-            </Col>
+            </Col> 
           );
         })}
       </Row>
